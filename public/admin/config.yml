@@ -1,0 +1,16 @@
+backend:
+  name: github
+  branch: main
+  repo: izainulabideen/decap-cms.git
+  base_url: http://localhost:3000/
+media_folder: "static/media"
+public_folder: "/media"
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
